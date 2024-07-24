@@ -1,5 +1,12 @@
-function test(a: string, b: number) {
-  console.log(a + b);
+import { createRoot } from "react-dom/client"
+import { App } from "./components/App";
+
+const root = document.getElementById('root');
+
+if (!root) {
+  throw new Error('root not found');
 }
 
-test('h2i', 2);
+const container = createRoot(root);
+
+container.render(<App />)
